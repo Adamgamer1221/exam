@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <p id="date"></p>
+    <section><h1 id="lol">Type your grade</h1>
+
+        <input type="number">
+        <p id="fail"> </p>
+        <button onclick="enter()">Enter</button></section>
+    
+    <script>
+        // Logical operators
+
+
+        // AND - OR - NOT
+        let date = new Date()
+        const day = date.getDate(); // Day of the month
+const month = date.getMonth() + 1; // Months are zero-based (0 = January, 1 = February, etc.)
+const year = date.getFullYear(); // Full year (e.g., 2024)
+const formattedDate = `${day}/${month}/${year}`;
+
+
+        document.getElementById('date').innerHTML = formattedDate;
+        let input = document.querySelector ('input')
+        function enter() {
+            if (input.value <= 10) {
+                p.innerHTML = 'fail'
+            } else if (input.value >= 10 && input.value < 50) {
+                p.innerHTML = 'acceted'
+            } else if (input.value >= 50 && input.value < 60) {
+                p.innerHTML = 'weak'
+            } else {
+                p.innerHTML = 'succeed'
+            }
+        
+        }
+        input.addEventListener('keyup', function(event){
+        if(event.code == 'Enter'){enter()}
+        })
+        
+
+
+
+
+
+        let p = document.getElementById('fail')
+
+       
+    </script>
+
+
+
+</body>
+
+</html>
